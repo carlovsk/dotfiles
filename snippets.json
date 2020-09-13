@@ -1,0 +1,75 @@
+{
+	"DOM Content Loaded": {
+		"prefix": "DOMContent",
+		"scope": "javascript, typescript",
+		"body": [
+		  "document.addEventListener('DOMContentLoaded', () => {",
+		  "",
+		  "    console.log('Carregou!');",
+		  "",
+		  "});"
+		],
+		"description": "DOM Content Loaded"
+	  },
+	"Element By Id": {
+		"prefix": "docId",
+		"scope": "javascript, typescript",
+		"body": [
+			"document.getElementById('"
+		],
+		"description": ""
+	},
+	"Flex Center": {
+		"prefix": "flexcent",
+		"scope": "css",
+		"body": [
+		  "display: flex;",
+		  "flex-direction: column;",
+		  "align-items: center;",
+		  "justify-content: center;"
+		],
+		"description": "Flex Center"
+	  },
+	  "React": {
+		"prefix": "react",
+		"scope": "javascript, typescript",
+		"body": [
+		  "import React from 'react';"
+		],
+		"description": "Easy import"
+	  },
+	  "Imports React": {
+		"prefix": "imppack",
+		"scope": "javascript, typescript",
+		"body": [
+		  "import {  } from '';"
+		],
+		"description": "Easy import"
+	  },
+	  "Imports Files": {
+		"prefix": "impfile",
+		"scope": "javascript, typescript",
+		"body": [
+		  "import  from './';"
+		],
+		"description": "Easy import"
+	  },
+	  "Styled Components": {
+		"prefix": "styled",
+		"scope": "javascript, typescript",
+		"body": [
+		  "import styled from 'styled-components/native';"
+		],
+		"description": "Easy import"
+	  },
+	  "Arrow function": {
+		"prefix": "arrow",
+		"scope": "javascript, typescript",
+		"body": [
+		  "() => {",
+		  "",
+		  "}"
+		],
+		"description": "Arrow function"
+	  }
+}
