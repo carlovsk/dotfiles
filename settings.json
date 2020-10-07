@@ -1,6 +1,20 @@
 {
-    "workbench.colorTheme": "Omni",
+    "workbench.colorTheme": "Dracula",
     "editor.fontFamily": "Fira Code",
     "editor.fontSize": 14,
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.startupEditor": "newUntitledFile",
+    "createReactTSXComponent.fileExtension": "js",
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
