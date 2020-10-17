@@ -6,8 +6,6 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.startupEditor": "newUntitledFile",
-    "createReactTSXComponent.fileExtension": "js",
-    "workbench.iconTheme": "eq-material-theme-icons-darker",
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
@@ -16,5 +14,15 @@
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "files.exclude": {
+        "**/node_modules": true
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     }
 }
