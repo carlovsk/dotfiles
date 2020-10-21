@@ -3,6 +3,7 @@
     "editor.fontFamily": "Fira Code",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
+    "editor.tabSize": 2,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.startupEditor": "newUntitledFile",
@@ -15,14 +16,21 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "workbench.iconTheme": "material-icon-theme",
     "files.exclude": {
-        "**/node_modules": true
+        "**/node_modules": true,
+        "**/.expo-shared": true,
+        "**/.vscode": true,
+        "**/.git": true
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
-    }
+    },
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "createReactTSXComponent.stylesFormat": "CSS",
+    "prettier.packageManager": "yarn",
+    "prettier.singleQuote": true
 }

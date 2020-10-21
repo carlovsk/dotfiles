@@ -1,7 +1,6 @@
 {
 	"DOM Content Loaded": {
 		"prefix": "DOMContent",
-		"scope": "javascript, typescript",
 		"body": [
 		  "document.addEventListener('DOMContentLoaded', () => {",
 		  "",
@@ -13,7 +12,6 @@
 	  },
 	"Element By Id": {
 		"prefix": "docId",
-		"scope": "javascript, typescript",
 		"body": [
 			"= document.getElementById(''),"
 		],
@@ -21,7 +19,6 @@
 	},
 	"Flex Center": {
 		"prefix": "flexcent",
-		"scope": "css",
 		"body": [
 		  "display: flex;",
 		  "flex-direction: column;",
@@ -32,7 +29,6 @@
 	  },
 	  "React": {
 		"prefix": "react",
-		"scope": "javascript, typescript",
 		"body": [
 		  "import React from 'react';"
 		],
@@ -40,7 +36,6 @@
 	  },
 	  "Imports React": {
 		"prefix": "imppack",
-		"scope": "javascript, typescript",
 		"body": [
 		  "import {  } from '';"
 		],
@@ -48,7 +43,6 @@
 	  },
 	  "Imports Files": {
 		"prefix": "impfile",
-		"scope": "javascript, typescript",
 		"body": [
 		  "import  from './';"
 		],
@@ -56,7 +50,6 @@
 	  },
 	  "Styled Components": {
 		"prefix": "styled",
-		"scope": "javascript, typescript",
 		"body": [
 		  "import styled from 'styled-components/native';"
 		],
@@ -64,7 +57,6 @@
 	  },
 	  "Arrow function": {
 		"prefix": "arrow",
-		"scope": "javascript, typescript, tsx",
 		"body": [
 		  "() => {",
 		  "",
@@ -74,7 +66,6 @@
 	  },
 	  "Objects Loops": {
 		"prefix": "objLoop",
-		"scope": "javascript, typescript",
 		"body": [
 		  "for (let prop in obj) {",
 		  "  console.log(\"obj.\" + prop + \" = \" + obj[prop]);",
@@ -84,7 +75,6 @@
 	  },
 	  "Code block separator": {
 		"prefix": "comments",
-		"scope": "javascript, typescript",
 		"body": [
 		  "// ==========================================================================================",
 		  "// setion name",
@@ -95,7 +85,6 @@
 	  },
 	  "HTML code block separator": {
 		"prefix": "htmlcomm",
-		"scope": "html",
 		"body": [
 		  "<!-- ------------------------------------------------------------------- -->",
 		  "<!-- nome da secao -->",
@@ -105,12 +94,35 @@
 	  },
 	  "Zero Fill": {
 		"prefix": "zerofill",
-		"scope": "javascript, typescript",
 		"body": [
 		  "const zeroFill = n => {",
 		  "        return ('0' + n).slice(-2);",
 		  "    }"
 		],
 		"description": ""
-	  }
+		},
+		"": {
+			"prefix": "imp",
+			"body": [
+				"import { something } from 'package';\"\": {",
+				"  \"prefix\": \"\",",
+				"  \"body\": [",
+				"    \"import { something} from 'package';\"",
+				"  ],",
+				"  \"description\": \"\"",
+				"}"
+			],
+			"description": ""
+		},
+		"No focus": {
+			"prefix": "nofocus",
+			"body": [
+				"textarea:focus, input:focus, select:focus {",
+				"  box-shadow: 0 0 0 0;",
+				"  border: 0 none;",
+				"  outline: 0;",
+				"} "
+			],
+			"description": "No focus"
+		}
 }
