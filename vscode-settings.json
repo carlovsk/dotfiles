@@ -20,7 +20,7 @@
         "**/node_modules": true,
         "**/.expo-shared": true,
         "**/.vscode": true,
-        "**/.git": true
+        "**/.git": true,
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -32,5 +32,8 @@
     "workbench.iconTheme": "material-icon-theme",
     "createReactTSXComponent.stylesFormat": "CSS",
     "prettier.packageManager": "yarn",
-    "prettier.singleQuote": true
+    "prettier.singleQuote": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }

@@ -2,14 +2,14 @@
 	"DOM Content Loaded": {
 		"prefix": "DOMContent",
 		"body": [
-		  "document.addEventListener('DOMContentLoaded', () => {",
-		  "",
-		  "    console.log('Carregou!');",
-		  "",
-		  "});"
+			"document.addEventListener('DOMContentLoaded', () => {",
+			"",
+			"    console.log('Carregou!');",
+			"",
+			"});"
 		],
 		"description": "DOM Content Loaded"
-	  },
+	},
 	"Element By Id": {
 		"prefix": "docId",
 		"body": [
@@ -20,109 +20,133 @@
 	"Flex Center": {
 		"prefix": "flexcent",
 		"body": [
-		  "display: flex;",
-		  "flex-direction: column;",
-		  "align-items: center;",
-		  "justify-content: center;"
+			"display: flex;",
+			"flex-direction: column;",
+			"align-items: center;",
+			"justify-content: center;"
 		],
 		"description": "Flex Center"
-	  },
-	  "React": {
+	},
+	"React": {
 		"prefix": "react",
 		"body": [
-		  "import React from 'react';"
+			"import React from 'react';"
 		],
 		"description": "Easy import"
-	  },
-	  "Imports React": {
+	},
+	"Imports React": {
 		"prefix": "imppack",
 		"body": [
-		  "import {  } from '';"
+			"import {  } from '';"
 		],
 		"description": "Easy import"
-	  },
-	  "Imports Files": {
+	},
+	"Imports Files": {
 		"prefix": "impfile",
 		"body": [
-		  "import  from './';"
+			"import  from './';"
 		],
 		"description": "Easy import"
-	  },
-	  "Styled Components": {
+	},
+	"Styled Components": {
 		"prefix": "styled",
 		"body": [
-		  "import styled from 'styled-components/native';"
+			"import styled from 'styled-components/native';"
 		],
 		"description": "Easy import"
-	  },
-	  "Arrow function": {
+	},
+	"Arrow function": {
 		"prefix": "arrow",
 		"body": [
-		  "() => {",
-		  "",
-		  "}"
+			"() => {",
+			"",
+			"}"
 		],
 		"description": "Arrow function"
-	  },
-	  "Objects Loops": {
+	},
+	"Objects Loops": {
 		"prefix": "objLoop",
 		"body": [
-		  "for (let prop in obj) {",
-		  "  console.log(\"obj.\" + prop + \" = \" + obj[prop]);",
-		  "}"
+			"for (let prop in obj) {",
+			"  console.log(\"obj.\" + prop + \" = \" + obj[prop]);",
+			"}"
 		],
 		"description": ""
-	  },
-	  "Code block separator": {
+	},
+	"Code block separator": {
 		"prefix": "comments",
 		"body": [
-		  "// ==========================================================================================",
-		  "// setion name",
-		  "// ==========================================================================================",
-		  ""
+			"// ==========================================================================================",
+			"// setion name",
+			"// ==========================================================================================",
+			""
 		],
 		"description": ""
-	  },
-	  "HTML code block separator": {
+	},
+	"HTML code block separator": {
 		"prefix": "htmlcomm",
 		"body": [
-		  "<!-- ------------------------------------------------------------------- -->",
-		  "<!-- nome da secao -->",
-		  "<!-- ------------------------------------------------------------------- -->"
+			"<!-- ------------------------------------------------------------------- -->",
+			"<!-- nome da secao -->",
+			"<!-- ------------------------------------------------------------------- -->"
 		],
 		"description": ""
-	  },
-	  "Zero Fill": {
+	},
+	"Zero Fill": {
 		"prefix": "zerofill",
 		"body": [
-		  "const zeroFill = n => {",
-		  "        return ('0' + n).slice(-2);",
-		  "    }"
+			"const zeroFill = n => {",
+			"        return ('0' + n).slice(-2);",
+			"    }"
 		],
 		"description": ""
-		},
-		"": {
-			"prefix": "imp",
-			"body": [
-				"import { something } from 'package';\"\": {",
-				"  \"prefix\": \"\",",
-				"  \"body\": [",
-				"    \"import { something} from 'package';\"",
-				"  ],",
-				"  \"description\": \"\"",
-				"}"
-			],
-			"description": ""
-		},
-		"No focus": {
-			"prefix": "nofocus",
-			"body": [
-				"textarea:focus, input:focus, select:focus {",
-				"  box-shadow: 0 0 0 0;",
-				"  border: 0 none;",
-				"  outline: 0;",
-				"} "
-			],
-			"description": "No focus"
-		}
+	},
+	"": {
+		"prefix": "imp",
+		"body": [
+			"import { something } from 'package';"
+		],
+		"description": ""
+	},
+	"No focus": {
+		"prefix": "nofocus",
+		"body": [
+			"textarea:focus, input:focus, select:focus {",
+			"  box-shadow: 0 0 0 0;",
+			"  border: 0 none;",
+			"  outline: 0;",
+			"} "
+		],
+		"description": "No focus"
+	},
+	"React icons": {
+		"prefix": "ri",
+		"body": [
+			"import {  } from 'react-icons/'"
+		],
+		"description": "React icons"
+	},
+	"Component Style": {
+		"prefix": "compsty",
+		"body": [
+			"import '../styles/components/component.css';"
+		],
+		"description": "Component Style"
+	},
+	"Page Style": {
+		"prefix": "pagesty",
+		"body": [
+			"import '../styles/pages/page.css';"
+		],
+		"description": "Page Style"
+	},
+	"Const function": {
+		"prefix": "consfunc",
+		"body": [
+			"const Function = () => {",
+			"    ",
+			"}"
+		],
+		"description": "Const function"
+	}
 }
