@@ -5,6 +5,7 @@
     "editor.fontLigatures": true,
     "editor.tabSize": 2,
     "editor.suggestSelection": "first",
+    "explorer.confirmDelete": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.startupEditor": "newUntitledFile",
     "[html]": {
