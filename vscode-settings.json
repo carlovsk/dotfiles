@@ -22,6 +22,11 @@
         "**/.expo-shared": true,
         "**/.vscode": true,
         "**/.git": true,
+        "**/yarn-error.log": true,
+        "**/yarn.lock": true,
+        "**/.webpack": true,
+        // "**/.babelrc": true,
+        // "**/.gitignore": true,
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -36,5 +41,12 @@
     "prettier.singleQuote": true,
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "createReactTSXComponent.fileExtension": "js",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": 0,
+    "python.languageServer": "Pylance",
+    "[yml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
