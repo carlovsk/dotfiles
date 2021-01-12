@@ -12,7 +12,7 @@
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -23,8 +23,9 @@
         "**/.vscode": true,
         "**/.git": true,
         "**/yarn-error.log": true,
-        "**/yarn.lock": true,
+        // "**/yarn.lock": true,
         "**/.webpack": true,
+        "**/.serverless": true,
         // "**/.babelrc": true,
         // "**/.gitignore": true,
     },
@@ -48,5 +49,11 @@
     "python.languageServer": "Pylance",
     "[yml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "workbench.editor.showTabs": true,
+    "todomd.defaultFile": "Todo.md",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
 }

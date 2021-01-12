@@ -186,4 +186,16 @@
 		],
 		"description": "Arrow function"
 	},
+	"statusCode": {
+		"prefix": "ret",
+		"body": [
+			"return {",
+			"    statusCode: 200,",
+			"    body: JSON.stringify({",
+			"      status: 'ok',",
+			"    }),",
+			"  };"
+		],
+		"description": ""
+	},
 }
