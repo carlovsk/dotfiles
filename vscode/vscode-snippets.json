@@ -10,13 +10,6 @@
 		],
 		"description": "DOM Content Loaded"
 	},
-	"Element By Id": {
-		"prefix": "docId",
-		"body": [
-			"= document.getElementById(''),"
-		],
-		"description": ""
-	},
 	"Flex Center": {
 		"prefix": "flexcent",
 		"body": [
@@ -198,4 +191,17 @@
 		],
 		"description": ""
 	},
+	"serverless-handler": {
+		"prefix": "sls-han",
+		"body": [
+			"async (event, context, callback) => {",
+			"  console.log(event);",
+			"",
+			"  return callback(null, {",
+			"    statusCode: 200,",
+			"  });",
+			"};"
+		],
+		"description": "serverless-handler"
+	}
 }

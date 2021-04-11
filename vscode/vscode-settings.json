@@ -1,11 +1,13 @@
 {
-    "workbench.colorTheme": "Dracula",
     "editor.fontFamily": "Fira Code",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
+    "editor.folding": true,
     "editor.tabSize": 2,
     "editor.suggestSelection": "first",
     "explorer.confirmDelete": true,
+    "typescript.validate.enable": false,
+    "javascript.validate.enable": false,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.startupEditor": "newUntitledFile",
     "[html]": {
@@ -23,11 +25,14 @@
         "**/.vscode": true,
         "**/.git": true,
         "**/yarn-error.log": true,
-        // "**/yarn.lock": true,
+        "**/yarn.lock": true,
         "**/.webpack": true,
         "**/.serverless": true,
-        // "**/.babelrc": true,
-        // "**/.gitignore": true,
+        "**/.gitignore": true,
+        "**/.gitlab-ci.yml": true,
+        "**/prettier.config.js": true,
+        "**/.eslintrc.js": true,
+        "**/.babelrc": true,
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -35,8 +40,8 @@
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.preferredDarkColorTheme": "Dracula",
+    "workbench.iconTheme": "vikings-icon-theme",
     "createReactTSXComponent.stylesFormat": "CSS",
     "prettier.packageManager": "yarn",
     "prettier.singleQuote": true,
@@ -45,7 +50,6 @@
     },
     "createReactTSXComponent.fileExtension": "js",
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "window.zoomLevel": 0,
     "python.languageServer": "Pylance",
     "[yml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -54,6 +58,24 @@
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "workbench.editor.showTabs": true,
-    "todomd.defaultFile": "Todo.md",
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "todomd.defaultFile": "/home/carlos/www/ds/devsquad-ats/todo.txt",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "tabnine.experimentalAutoImports": true,
+    "editor.linkedEditing": true,
+    "elixirLS.dialyzerEnabled": false,
+    "elixirLS.suggestSpecs": false,
+    "git.suggestSmartCommit": false,
+    "window.menuBarVisibility": "toggle",
+    "terminal.integrated.fontWeightBold": "normal",
+    "terminal.integrated.fontSize": 13,
+    "todo-tree.tree.showScanModeButton": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "workbench.colorCustomizations": {},
+    "workbench.colorTheme": "Dracula Soft",
+
 }
