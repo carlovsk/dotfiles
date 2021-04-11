@@ -1,0 +1,15 @@
+[user]
+	name = Carlos Daniel
+	email = email
+
+[alias]
+	st = status
+	cm = commit
+	br = branch
+	ch = checkout
+	ps = push
+	pl = pull
+	recm = commit --amend --no-edit
+
+[credential]
+	helper = cache
