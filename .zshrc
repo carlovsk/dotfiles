@@ -1,16 +1,23 @@
 export ZSH="/home/carlos/.oh-my-zsh"
-
 ZSH_THEME="spaceship"
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-# Alias
+# aliases
 alias cls="clear"
 alias dynamo="cd ~/dynamodb && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb"
+alias aws="cat ~/.aws/credentials"
+alias awsc="code ~/.aws/credentials"
+alias zs="cat ~/.zshrc"
+alias zsc="code ~/.zshrc"
+alias vic="code ~/.vimrc"
+alias py="python3"
+alias ngrok="~/ngrok"
 
+
+# spaceship config
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
   dir           # Current directory section
@@ -29,7 +36,7 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
 
-### Added by Zinit's installer
+# zinit
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
@@ -42,20 +49,16 @@ source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-### Zinit Plugins
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
 zinit light-mode for \
     zinit-zsh/z-a-rust \
     zinit-zsh/z-a-as-monitor \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node
 
-### End of Zinit's installer chunk
 
 # tabtab source for packages
 # uninstall by removing these lines
@@ -67,3 +70,4 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+export TERM=xterm-256color

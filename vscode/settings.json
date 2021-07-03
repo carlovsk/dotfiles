@@ -1,6 +1,6 @@
 {
     "editor.fontFamily": "Fira Code",
-    "editor.fontSize": 14,
+    "editor.fontSize": 13.5,
     "editor.fontLigatures": true,
     "editor.folding": true,
     "editor.tabSize": 2,
@@ -9,48 +9,42 @@
     "typescript.validate.enable": false,
     "javascript.validate.enable": false,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
     "workbench.startupEditor": "newUntitledFile",
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "files.exclude": {
-        "**/node_modules": true,
+        // "**/node_modules": true,
         "**/.expo-shared": true,
         "**/.vscode": true,
+        "**/coverage": true,
         "**/.git": true,
         "**/yarn-error.log": true,
-        "**/yarn.lock": true,
+        // "**/yarn.lock": true,
         "**/.webpack": true,
-        "**/.serverless": true,
-        "**/.gitignore": true,
-        "**/.gitlab-ci.yml": true,
-        "**/prettier.config.js": true,
-        "**/.eslintrc.js": true,
-        "**/.babelrc": true,
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        // "**/.serverless": true,
+        // "**/.babelrc": true,
+        // "**/.gitignore": true,
+        // "**/.gitlab-ci.yml": true,
+        // "**/prettier.config.js": true,
+        // "**/.eslintrc.js": true,
     },
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "workbench.preferredDarkColorTheme": "Dracula",
-    "workbench.iconTheme": "vikings-icon-theme",
-    "createReactTSXComponent.stylesFormat": "CSS",
-    "prettier.packageManager": "yarn",
+    "workbench.iconTheme": "material-icon-theme",
     "prettier.singleQuote": true,
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "createReactTSXComponent.fileExtension": "js",
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "python.languageServer": "Pylance",
     "[yml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -58,17 +52,12 @@
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "workbench.editor.showTabs": true,
-    "todomd.defaultFile": "/home/carlos/www/ds/devsquad-ats/todo.txt",
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "tabnine.experimentalAutoImports": true,
     "editor.linkedEditing": true,
-    "elixirLS.dialyzerEnabled": false,
-    "elixirLS.suggestSpecs": false,
     "git.suggestSmartCommit": false,
     "window.menuBarVisibility": "toggle",
+    "standard.autoFixOnSave": false,
     "terminal.integrated.fontWeightBold": "normal",
     "terminal.integrated.fontSize": 13,
-    "todo-tree.tree.showScanModeButton": false,
     "workbench.editorAssociations": [
         {
             "viewType": "jupyter.notebook.ipynb",
@@ -76,6 +65,28 @@
         }
     ],
     "workbench.colorCustomizations": {},
-    "workbench.colorTheme": "Dracula Soft",
-
+    "workbench.colorTheme": "Celestial + Dracula",
+    "tabnine.experimentalAutoImports": true,
+    "cSpell.userWords": [
+        "calendly",
+        "camelcase",
+        "devsquad",
+        "dynamoose",
+        "gitlab",
+        "linkedin",
+        "middlewares",
+        "mintsoft",
+        "mrkdwn",
+        "querystrings",
+        "sendgrid"
+    ],
+    "jest.debugMode": true,
+    "jest.showCoverageOnLoad": true,
+    "jest.coverageColors": {
+        "uncovered": "rgba(56, 1, 7, 0.2)",
+        "partially-covered": "rgba(255,215,0, 0.2)"
+    },
+    "resmon.show.battery": false,
+    "resmon.show.cpufreq": false,
+    "resmon.show.cpuusage": false
 }

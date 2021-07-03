@@ -49,9 +49,9 @@
 		"description": "Easy import"
 	},
 	"Arrow function": {
-		"prefix": "arrow",
+		"prefix": "arr",
 		"body": [
-			"() => {",
+			"const fn = async () => {",
 			"",
 			"}"
 		],
@@ -203,5 +203,49 @@
 			"};"
 		],
 		"description": "serverless-handler"
+	},
+	"Slack App Interaction Handler": {
+		"prefix": "int-handler",
+		"body": [
+			"import { statusCode } from '../utils';",
+			"",
+			"const model = (payload) => {",
+			"  console.log(payload);",
+			"",
+			"  return statusCode;",
+			"};",
+			"",
+			"export default model;",
+			""
+		],
+		"description": "Slack App Interaction Handler"
+	},
+	"test": {
+		"prefix": "describe",
+		"body": [
+			"describe('', () => {",
+			"  beforeEach(() => { })",
+			"  afterEach(() => jest.clearAllMocks())",
+			"",
+			"  test('test', async () => {",
+			"",
+			"  })",
+			"})"
+		],
+		"description": "test"
+	},
+	"jest-fn": {
+		"prefix": "jestfn",
+		"body": [
+			"jest.fn((...params) => (params))"
+		],
+		"description": "jest mock function"
+	},
+	"test-fn": {
+		"prefix": "test",
+		"body": [
+			"test('', async () => { })"
+		],
+		"description": "jest mock function"
 	}
 }
