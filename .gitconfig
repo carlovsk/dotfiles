@@ -1,15 +1,21 @@
 [user]
-	name = Carlos Daniel
-	email = email
+        name = Carlos Daniel
+        email = carlos.daniel@devsquad.email
 
 [alias]
-	st = status
-	cm = commit
-	br = branch
-	ch = checkout
-	ps = push
-	pl = pull
-	recm = commit --amend --no-edit
-
+        st = status
+        cm = commit
+        b = branch
+        ch = checkout
+        ps = push
+        pl = pull
+        recm = commit --amend --no-edit
+        cfe = "!f() { git commit -m \"feat: ${1}\"; }; f"
+        cfi = "!f() { git commit -m \"fix: ${1}\"; }; f"
+        cci = "!f() { git commit -m \"ci: ${1}\"; }; f"
+        cch = "!f() { git commit -m \"chore: ${1}\"; }; f"
+        cre = "!f() { git commit -m \"refactor: ${1}\"; }; f"
+        cte = "!f() { git commit -m \"test: ${1}\"; }; f"
+        cst = "!f() { git commit -m \"style: ${1}\"; }; f"
 [credential]
-	helper = cache
+        helper = cache
