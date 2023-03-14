@@ -1,12 +1,13 @@
 [user]
         name = Carlos Daniel
-        email = carlos.daniel@devsquad.email
+        email = carlosdnbarboza@gmail.com
 
 [alias]
         st = status
         cm = commit
         b = branch
         ch = checkout
+        cp = cherry-pick
         ps = push
         pl = pull
         recm = commit --amend --no-edit
@@ -19,3 +20,9 @@
         cst = "!f() { git commit -m \"style: ${1}\"; }; f"
 [credential]
         helper = cache
+[pull]
+        rebase = false
+[init]
+        defaultBranch = master
+[push]
+	autoSetupRemote = true

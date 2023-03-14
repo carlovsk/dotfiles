@@ -112,13 +112,6 @@
 		],
 		"description": ""
 	},
-	"": {
-		"prefix": "imp",
-		"body": [
-			"import { something } from 'package';"
-		],
-		"description": ""
-	},
 	"No focus": {
 		"prefix": "nofocus",
 		"body": [
@@ -247,5 +240,22 @@
 			"test('', async () => { })"
 		],
 		"description": "jest mock function"
+	},
+	"Snippet Generator": {
+		"prefix": "logger",
+		"body": [
+			"const logger = functionName => debug(`${process.env.PROJECT_NAME}:path:${functionName}`)"
+		],
+		"description": "Snippet Generator"
+	},
+	"Create default handler": {
+		"prefix": "ech",
+		"body": [
+			"export const handler = event => {",
+			"",
+			"}",
+			""
+		],
+		"description": "Create default handler"
 	}
 }

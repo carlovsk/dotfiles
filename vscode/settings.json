@@ -1,92 +1,110 @@
 {
-    "editor.fontFamily": "Fira Code",
-    "editor.fontSize": 13.5,
-    "editor.fontLigatures": true,
-    "editor.folding": true,
-    "editor.tabSize": 2,
-    "editor.suggestSelection": "first",
-    "explorer.confirmDelete": true,
-    "typescript.validate.enable": false,
-    "javascript.validate.enable": false,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
-    "workbench.startupEditor": "newUntitledFile",
     "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
+      "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+      "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+      "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "files.exclude": {
-        // "**/node_modules": true,
-        "**/.expo-shared": true,
-        "**/.vscode": true,
-        "**/coverage": true,
-        "**/.git": true,
-        "**/yarn-error.log": true,
-        // "**/yarn.lock": true,
-        "**/.webpack": true,
-        // "**/.serverless": true,
-        // "**/.babelrc": true,
-        // "**/.gitignore": true,
-        // "**/.gitlab-ci.yml": true,
-        // "**/prettier.config.js": true,
-        // "**/.eslintrc.js": true,
+    "[jsonc]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "workbench.iconTheme": "material-icon-theme",
-    "prettier.singleQuote": true,
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "[yml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
+      "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "workbench.editor.showTabs": true,
-    "editor.linkedEditing": true,
-    "git.suggestSmartCommit": false,
-    "window.menuBarVisibility": "toggle",
-    "standard.autoFixOnSave": false,
-    "terminal.integrated.fontWeightBold": "normal",
-    "terminal.integrated.fontSize": 13,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "workbench.colorCustomizations": {},
-    "workbench.colorTheme": "Celestial + Dracula",
-    "tabnine.experimentalAutoImports": true,
+    "[yml]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "cSpell.userWords": [
-        "calendly",
-        "camelcase",
-        "devsquad",
-        "dynamoose",
-        "gitlab",
-        "linkedin",
-        "middlewares",
-        "mintsoft",
-        "mrkdwn",
-        "querystrings",
-        "sendgrid"
+      "calendly",
+      "camelcase",
+      "devsquad",
+      "dynamoose",
+      "gitlab",
+      "linkedin",
+      "middlewares",
+      "mintsoft",
+      "mrkdwn",
+      "querystrings",
+      "sendgrid",
+      "Snuffhouse",
+      "unmarshalling"
     ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.accessibilitySupport": "off",
+    "editor.folding": true,
+    "editor.fontFamily": "MonoLisa",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13.5,
+    "editor.inlineSuggest.enabled": true,
+    "editor.linkedEditing": true,
+    "editor.suggestSelection": "first",
+    "editor.tabSize": 2,
+    "eslint.validate": [
+      "typescript",
+      "typescriptreact"
+    ],
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.exclude": {
+      "**/.build": true,
+      "**/.expo-shared": true,
+      "**/.git": true,
+      "**/.webpack": true,
+      "**/layers": true,
+      "coverage": true
+    },
+    "git.confirmSync": false,
+    "git.mergeEditor": true,
+    "git.suggestSmartCommit": false,
+    "github.copilot.enable": {
+      "*": true,
+      "markdown": true,
+      "plaintext": true,
+      "yaml": false
+    },
+    "gitlens.advanced.messages": {
+      "suppressGitMissingWarning": true
+    },
+    "gitlens.views.branches.files.compact": false,
+    "gitlens.views.commits.files.compact": false,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.validate.enable": false,
+    "jest.coverageColors": {
+      "partially-covered": "rgba(255,215,0, 0.2)",
+      "uncovered": "rgba(56, 1, 7, 0.2)"
+    },
     "jest.debugMode": true,
     "jest.showCoverageOnLoad": true,
-    "jest.coverageColors": {
-        "uncovered": "rgba(56, 1, 7, 0.2)",
-        "partially-covered": "rgba(255,215,0, 0.2)"
+    "security.workspace.trust.untrustedFiles": "open",
+    "standard.autoFixOnSave": true,
+    "standard.enable": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.env.osx": {
+      "FIG_NEW_SESSION": "1"
     },
-    "resmon.show.battery": false,
-    "resmon.show.cpufreq": false,
-    "resmon.show.cpuusage": false
-}
+    "terminal.integrated.fontFamily": "fira code",
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontWeightBold": "normal",
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "window.commandCenter": true,
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+    "workbench.colorCustomizations": {},
+    "workbench.colorTheme": "Dracula",
+    "workbench.editor.showTabs": true,
+    "workbench.editorAssociations": {
+      "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.tree.indent": 8
+  }
