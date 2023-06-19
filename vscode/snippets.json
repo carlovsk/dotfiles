@@ -60,9 +60,11 @@
 	"IIFE": {
 		"prefix": "iife",
 		"body": [
-			"(async () => {",
-			"",
-			"})();"
+			"useEffect(() => {",
+			"	(async () => {",
+			"		// code",
+			"	})();",
+			"});"
 		],
 		"description": ""
 	},
@@ -257,5 +259,14 @@
 			""
 		],
 		"description": "Create default handler"
+	},
+	"Use State Modal": {
+		"prefix": "usestatemodal",
+		"body": [
+			"const [isModalOpened, setIsModalOpened] = useState(false)",
+			"const openModal = () => setIsModalOpened(true)",
+			"const closeModal = () => setIsModalOpened(false)"
+		],
+		"description": "Use State Modal"
 	}
 }

@@ -1,5 +1,5 @@
 export ZSH="/Users/carlos/.oh-my-zsh"
-ZSH_THEME="spaceship"
+ZSH_THEME="dracula-pro"
 
 plugins=(git)
 
@@ -15,31 +15,7 @@ alias zsn="nano ~/.zshrc"
 alias vai="git push -4"
 alias vem="git pull -4"
 alias ytdl="youtube-dl"
-alias hosts="sudo nano /etc/hosts"
-
-# spaceship config
-SPACESHIP_PROMPT_ORDER=(
-  time          # Time stamps section
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  package       # Package version
-  node          # Node.js section
-  hg            # Mercurial section (hg_branch  + hg_status)
-  exec_time     # Execution time
-  line_sep      # Line break
-  vi_mode       # Vi-mode indicator
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
-SPACESHIP_USER_SHOW=always
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_CHAR_SYMBOL="❯"
-SPACESHIP_CHAR_SUFFIX=" "
-SPACESHIP_TIME_SHOW=true
-SPACESHIP_TIME_FORMAT=%*
+alias run="npm run"
 
 # zinit
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -69,13 +45,10 @@ zinit light zsh-users/zsh-completions
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 
 # exports
-export AWS_REGION=sa-east-1
-export AWS_DEFAULT_REGION=sa-east-1
 export EDITOR=nano
+export AWS_REGION=us-east-1
 
 source ~/.profile
 
 export PATH="/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-
-# Created by `pipx` on 2022-07-11 19:14:23
-export PATH="$PATH:/Users/carlos/.local/bin"
+source /Users/carlos/.config/op/plugins.sh

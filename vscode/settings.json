@@ -1,110 +1,113 @@
 {
-    "[html]": {
-      "editor.defaultFormatter": "vscode.html-language-features"
-    },
-    "[javascript]": {
-      "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[json]": {
-      "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[jsonc]": {
-      "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[typescript]": {
-      "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[yaml]": {
-      "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "[yml]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "cSpell.userWords": [
-      "calendly",
-      "camelcase",
-      "devsquad",
-      "dynamoose",
-      "gitlab",
-      "linkedin",
-      "middlewares",
-      "mintsoft",
-      "mrkdwn",
-      "querystrings",
-      "sendgrid",
-      "Snuffhouse",
-      "unmarshalling"
-    ],
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.accessibilitySupport": "off",
-    "editor.folding": true,
-    "editor.fontFamily": "MonoLisa",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 13.5,
-    "editor.inlineSuggest.enabled": true,
-    "editor.linkedEditing": true,
-    "editor.suggestSelection": "first",
-    "editor.tabSize": 2,
-    "eslint.validate": [
-      "typescript",
-      "typescriptreact"
-    ],
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "files.exclude": {
-      "**/.build": true,
-      "**/.expo-shared": true,
-      "**/.git": true,
-      "**/.webpack": true,
-      "**/layers": true,
-      "coverage": true
-    },
-    "git.confirmSync": false,
-    "git.mergeEditor": true,
-    "git.suggestSmartCommit": false,
-    "github.copilot.enable": {
-      "*": true,
-      "markdown": true,
-      "plaintext": true,
-      "yaml": false
-    },
-    "gitlens.advanced.messages": {
-      "suppressGitMissingWarning": true
-    },
-    "gitlens.views.branches.files.compact": false,
-    "gitlens.views.commits.files.compact": false,
-    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "javascript.validate.enable": false,
-    "jest.coverageColors": {
-      "partially-covered": "rgba(255,215,0, 0.2)",
-      "uncovered": "rgba(56, 1, 7, 0.2)"
-    },
-    "jest.debugMode": true,
-    "jest.showCoverageOnLoad": true,
-    "security.workspace.trust.untrustedFiles": "open",
-    "standard.autoFixOnSave": true,
-    "standard.enable": true,
-    "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.defaultProfile.osx": "zsh",
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "terminal.integrated.env.osx": {
-      "FIG_NEW_SESSION": "1"
-    },
-    "terminal.integrated.fontFamily": "fira code",
-    "terminal.integrated.fontSize": 13,
-    "terminal.integrated.fontWeightBold": "normal",
-    "terminal.integrated.sendKeybindingsToShell": true,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "window.commandCenter": true,
-    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
-    "workbench.colorCustomizations": {},
-    "workbench.colorTheme": "Dracula",
-    "workbench.editor.showTabs": true,
-    "workbench.editorAssociations": {
-      "*.ipynb": "jupyter.notebook.ipynb"
-    },
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.tree.indent": 8
-  }
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[yml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.userWords": [
+    "calendly",
+    "camelcase",
+    "devsquad",
+    "dynamoose",
+    "gitlab",
+    "linkedin",
+    "middlewares",
+    "mintsoft",
+    "mrkdwn",
+    "querystrings",
+    "sendgrid",
+    "Snuffhouse",
+    "unmarshalling"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
+  "editor.folding": true,
+  "editor.fontFamily": "Jetbrains Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 13.5,
+  "editor.inlineSuggest.enabled": true,
+  "editor.linkedEditing": true,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact"
+  ],
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    "**/.build": true,
+    "**/.expo-shared": true,
+    "**/.git": true,
+    "**/.webpack": true,
+    "**/layers": true,
+    "coverage": true
+  },
+  "git.confirmSync": false,
+  "git.mergeEditor": true,
+  "git.suggestSmartCommit": false,
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "plaintext": true,
+    "yaml": false
+  },
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "gitlens.views.branches.files.compact": false,
+  "gitlens.views.commits.files.compact": false,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false,
+  "jest.coverageColors": {
+    "partially-covered": "rgba(255,215,0, 0.2)",
+    "uncovered": "rgba(56, 1, 7, 0.2)"
+  },
+  "jest.debugMode": true,
+  "jest.showCoverageOnLoad": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "standard.autoFixOnSave": true,
+  "standard.enable": true,
+  "terminal.external.osxExec": "Hyper.app",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.fontFamily": "Menlo Nerd Font, \"DejaVu Sans Mono\", Consolas, \"Lucida Console\", monospace",
+  "terminal.integrated.fontSize": 13.5,
+  "terminal.integrated.fontWeightBold": "normal",
+  "terminal.integrated.sendKeybindingsToShell": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.commandCenter": true,
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+  "workbench.colorCustomizations": {},
+  "workbench.editor.showTabs": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.indent": 8,
+  "workbench.colorTheme": "Dracula Pro",
+  "extensions.autoCheckUpdates": false,
+  "githubPullRequests.pullBranch": "never",
+  "terminal.integrated.customGlyphs": false
+}

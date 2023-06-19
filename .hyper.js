@@ -10,7 +10,7 @@ module.exports = {
         // default font size in pixels for all tabs
         fontSize: 13,
         // font family with optional fallbacks
-        fontFamily: 'Fira Code',
+		fontFamily: 'Menlo Nerd Font, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
         // default font weight: 'normal' or 'bold'
         fontWeight: 'normal',
         // font weight for bold characters: 'normal' or 'bold'
@@ -51,6 +51,8 @@ module.exports = {
         showWindowControls: '',
         // custom padding (CSS format, i.e.: `top right bottom left`)
         padding: '12px 14px',
+        // overwrite window size
+        windowSize: [1000, 700],
         // the full list. if you're going to provide the full color palette,
         // including the 6 x 6 color cubes and the grayscale map, just provide
         // an array here instead of a color map object
@@ -151,4 +153,3 @@ module.exports = {
     },
 };
 //# sourceMappingURL=config-default.js.map
-
