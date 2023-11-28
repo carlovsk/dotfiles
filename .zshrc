@@ -12,10 +12,49 @@ alias zs="cat ~/.zshrc"
 alias zss="source ~/.zshrc"
 alias zsc="code ~/.zshrc"
 alias zsn="nano ~/.zshrc"
-alias vai="git push -4"
-alias vem="git pull -4"
 alias ytdl="youtube-dl"
-alias run="npm run"
+alias nrsl="npm run start:local"
+alias nsil="npx serverless invoke local --function"
+alias nrtu="npm run test:unit -- --watch"
+alias awsc="code ~/.aws/config"
+alias awsl="aws sso login"
+alias awse="aws-sso-creds export"
+
+alias gl="git log"
+alias vai="git push"
+alias vem="git pull"
+alias gfo="git fetch origin"
+alias gmc="git merge --continue"
+alias gmom="git merge origin/main"
+
+function cd {
+    builtin cd "$@"
+    RET=$?
+    ls -la
+    return $RET
+}
+
+# spaceship config
+SPACESHIP_PROMPT_ORDER=(
+  time          # Time stamps section
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  node          # Node.js section
+  hg            # Mercurial section (hg_branch  + hg_status)
+  exec_time     # Execution time
+  line_sep      # Line break
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+SPACESHIP_USER_SHOW=always
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_TIME_SHOW=true
+SPACESHIP_TIME_FORMAT=%*
 
 # zinit
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -52,3 +91,15 @@ source ~/.profile
 
 export PATH="/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 source /Users/carlos/.config/op/plugins.sh
+
+# pnpm
+export PNPM_HOME="/Users/carlos/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+# bun completions
+[ -s "/Users/carlos/.bun/_bun" ] && source "/Users/carlos/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

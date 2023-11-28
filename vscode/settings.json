@@ -12,7 +12,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
@@ -20,39 +20,32 @@
   "[yml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.userWords": [
-    "calendly",
-    "camelcase",
-    "devsquad",
-    "dynamoose",
-    "gitlab",
-    "linkedin",
-    "middlewares",
-    "mintsoft",
-    "mrkdwn",
-    "querystrings",
-    "sendgrid",
-    "Snuffhouse",
-    "unmarshalling"
-  ],
-  "diffEditor.ignoreTrimWhitespace": false,
   "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  },
   "editor.folding": true,
-  "editor.fontFamily": "Jetbrains Mono",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 13.5,
+  "editor.fontFamily": "'Monaspace Neon', monospace",
+  "editor.fontLigatures": "'calt', 'liga', 'dlig'",
+  "editor.fontSize": 13,
   "editor.inlineSuggest.enabled": true,
   "editor.linkedEditing": true,
+  "editor.stickyScroll.enabled": true,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
+  "eslint.format.enable": true,
   "eslint.validate": [
     "typescript",
     "typescriptreact"
   ],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "extensions.autoCheckUpdates": false,
+  "extensions.ignoreRecommendations": true,
   "files.exclude": {
-    "**/.build": true,
+    // "**/.esbuild": false,
+    // "**/.build": true,
     "**/.expo-shared": true,
     "**/.git": true,
     "**/.webpack": true,
@@ -68,6 +61,9 @@
     "plaintext": true,
     "yaml": false
   },
+  "githubPullRequests.createOnPublishBranch": "never",
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.terminalLinksHandler": "github",
   "gitlens.advanced.messages": {
     "suppressGitMissingWarning": true
   },
@@ -82,10 +78,22 @@
   },
   "jest.debugMode": true,
   "jest.showCoverageOnLoad": true,
+  "jestrunner.configPath": "./jest.config.js",
   "security.workspace.trust.untrustedFiles": "open",
+  "settingsSync.ignoredSettings": [
+    "editor.fontFamily"
+  ],
+  "sonarlint.connectedMode.connections.sonarcloud": [
+    {
+      "organizationKey": "rediredi",
+      "connectionId": "rediredi"
+    }
+  ],
   "standard.autoFixOnSave": true,
   "standard.enable": true,
   "terminal.external.osxExec": "Hyper.app",
+  "terminal.integrated.automationProfile.osx": {},
+  "terminal.integrated.customGlyphs": false,
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.env.osx": {
@@ -98,16 +106,14 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.commandCenter": true,
   "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+  "workbench.activityBar.location": "top",
   "workbench.colorCustomizations": {},
-  "workbench.editor.showTabs": true,
+  "workbench.colorTheme": "Dracula Pro",
+  "workbench.editor.showTabs": "multiple",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.tree.indent": 8,
-  "workbench.colorTheme": "Dracula Pro",
-  "extensions.autoCheckUpdates": false,
-  "githubPullRequests.pullBranch": "never",
-  "terminal.integrated.customGlyphs": false
+  "workbench.tree.indent": 8
 }

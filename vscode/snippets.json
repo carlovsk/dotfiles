@@ -1,116 +1,22 @@
 {
-	"DOM Content Loaded": {
-		"prefix": "DOMContent",
-		"body": [
-			"document.addEventListener('DOMContentLoaded', () => {",
-			"",
-			"    console.log('Carregou!');",
-			"",
-			"});"
-		],
-		"description": "DOM Content Loaded"
-	},
-	"Flex Center": {
-		"prefix": "flexcent",
-		"body": [
-			"display: flex;",
-			"flex-direction: column;",
-			"align-items: center;",
-			"justify-content: center;"
-		],
-		"description": "Flex Center"
-	},
-	"React": {
-		"prefix": "react",
-		"body": [
-			"import React from 'react';"
-		],
-		"description": "Easy import"
-	},
-	"Imports React": {
-		"prefix": "imppack",
-		"body": [
-			"import {  } from '';"
-		],
-		"description": "Easy import"
-	},
-	"Imports Files": {
-		"prefix": "impfile",
-		"body": [
-			"import  from './';"
-		],
-		"description": "Easy import"
-	},
-	"Styled Components": {
-		"prefix": "styled",
-		"body": [
-			"import styled from 'styled-components/native';"
-		],
-		"description": "Easy import"
-	},
-	"Arrow function": {
-		"prefix": "arr",
-		"body": [
-			"const fn = async () => {",
-			"",
-			"}"
-		],
-		"description": "Arrow function"
-	},
 	"IIFE": {
 		"prefix": "iife",
 		"body": [
 			"useEffect(() => {",
-			"	(async () => {",
-			"		// code",
-			"	})();",
+			"(async () => {",
+			"// code",
+			"})();",
 			"});"
 		],
 		"description": ""
 	},
-	"Objects Loops": {
-		"prefix": "objLoop",
-		"body": [
-			"for (let prop in obj) {",
-			"  console.log(\"obj.\" + prop + \" = \" + obj[prop]);",
-			"}"
-		],
-		"description": ""
-	},
 	"Code block separator": {
-		"prefix": "comments",
+		"prefix": "comm",
 		"body": [
 			"// ==========================================================================================",
 			"// section name",
 			"// ==========================================================================================",
 			""
-		],
-		"description": ""
-	},
-	"HTML code block separator": {
-		"prefix": "htmlcomm",
-		"body": [
-			"<!-- ------------------------------------------------------------------- -->",
-			"<!-- nome da secao -->",
-			"<!-- ------------------------------------------------------------------- -->"
-		],
-		"description": ""
-	},
-	"YML code block separator": {
-		"prefix": "ymlcomm",
-		"body": [
-			"# ==========================================================================================",
-			"# section name",
-			"# =========================================================================================="
-		],
-		"description": ""
-	},
-	"Zero Fill": {
-		"prefix": "zerofill",
-		"body": [
-			"const zeroFill = n => {",
-			"        return ('0' + n).slice(-2);",
-			"    }"
 		],
 		"description": ""
 	},
@@ -125,148 +31,40 @@
 		],
 		"description": "No focus"
 	},
-	"React icons": {
-		"prefix": "ri",
-		"body": [
-			"import {  } from 'react-icons/'"
-		],
-		"description": "React icons"
-	},
-	"Component Style": {
-		"prefix": "compsty",
-		"body": [
-			"import '../styles/components/component.css';"
-		],
-		"description": "Component Style"
-	},
-	"Page Style": {
-		"prefix": "pagesty",
-		"body": [
-			"import '../styles/pages/page.css';"
-		],
-		"description": "Page Style"
-	},
-	"Const function": {
-		"prefix": "consfunc",
-		"body": [
-			"const Function = () => {",
-			"    ",
-			"}"
-		],
-		"description": "Const function"
-	},
-	"Arrow err": {
-		"prefix": "arrowerr",
-		"body": [
-			"(err, data) => {",
-			"  if (err) return console.log(`Error: ${err}.`);",
-			"",
-			"}"
-		],
-		"description": ""
-	},
-	"Arrow req res": {
-		"prefix": "arreq",
-		"body": [
-			"(req, res) => {",
-			"",
-			"}"
-		],
-		"description": "Arrow function"
-	},
-	"statusCode": {
-		"prefix": "ret",
-		"body": [
-			"return {",
-			"    statusCode: 200,",
-			"    body: JSON.stringify({",
-			"      status: 'ok',",
-			"    }),",
-			"  };"
-		],
-		"description": ""
-	},
-	"serverless-handler": {
-		"prefix": "sls-han",
-		"body": [
-			"async (event, context, callback) => {",
-			"  console.log(event);",
-			"",
-			"  return callback(null, {",
-			"    statusCode: 200,",
-			"  });",
-			"};"
-		],
-		"description": "serverless-handler"
-	},
-	"Slack App Interaction Handler": {
-		"prefix": "int-handler",
-		"body": [
-			"import { statusCode } from '../utils';",
-			"",
-			"const model = (payload) => {",
-			"  console.log(payload);",
-			"",
-			"  return statusCode;",
-			"};",
-			"",
-			"export default model;",
-			""
-		],
-		"description": "Slack App Interaction Handler"
-	},
-	"test": {
-		"prefix": "describe",
-		"body": [
-			"describe('', () => {",
-			"  beforeEach(() => { })",
-			"  afterEach(() => jest.clearAllMocks())",
-			"",
-			"  test('test', async () => {",
-			"",
-			"  })",
-			"})"
-		],
-		"description": "test"
-	},
-	"jest-fn": {
-		"prefix": "jestfn",
-		"body": [
-			"jest.fn((...params) => (params))"
-		],
-		"description": "jest mock function"
-	},
-	"test-fn": {
-		"prefix": "test",
-		"body": [
-			"test('', async () => { })"
-		],
-		"description": "jest mock function"
-	},
-	"Snippet Generator": {
+	"Debug logger": {
 		"prefix": "logger",
 		"body": [
 			"const logger = functionName => debug(`${process.env.PROJECT_NAME}:path:${functionName}`)"
 		],
 		"description": "Snippet Generator"
 	},
-	"Create default handler": {
-		"prefix": "ech",
+	"Create first test": {
+		"prefix": "ittrue",
 		"body": [
-			"export const handler = event => {",
-			"",
-			"}",
-			""
+			"it('should be true', () => expect(true).toBe(true));"
 		],
-		"description": "Create default handler"
+		"description": "Create a truthy test to start"
 	},
-	"Use State Modal": {
-		"prefix": "usestatemodal",
+	"Arrange Act Assert Test": {
+		"prefix": "aaaTest",
 		"body": [
-			"const [isModalOpened, setIsModalOpened] = useState(false)",
-			"const openModal = () => setIsModalOpened(true)",
-			"const closeModal = () => setIsModalOpened(false)"
+			"describe('${1}', () => {",
+			"  it('should', () => {",
+			"    //arrange",
+			"    //act",
+			"    //assert",
+			"  });",
+			"});"
 		],
-		"description": "Use State Modal"
+		"description": "Arrange Act Assert Test"
+	},
+	"Arrange Act Assert Comments": {
+		"prefix": "aaa",
+		"body": [
+			"    //arrange",
+			"    //act",
+			"    //assert"
+		],
+		"description": "Arrange Act Assert Comments"
 	}
 }
