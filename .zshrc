@@ -73,11 +73,10 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
-# zinit light-mode for \
-#     zinit-zsh/z-a-rust \
-#     zinit-zsh/z-a-as-monitor \
-#     zinit-zsh/z-a-patch-dl \
-#     zinit-zsh/z-a-bin-gem-node
+# nvm
+ export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # tabtab source for packages
 # uninstall by removing these lines
