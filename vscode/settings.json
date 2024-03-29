@@ -1,119 +1,117 @@
 {
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "[yml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.accessibilitySupport": "off",
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": true
-  },
-  "editor.folding": true,
-  "editor.fontFamily": "'Monaspace Neon', monospace",
-  "editor.fontLigatures": "'calt', 'liga', 'dlig'",
-  "editor.fontSize": 13,
-  "editor.inlineSuggest.enabled": true,
-  "editor.linkedEditing": true,
-  "editor.stickyScroll.enabled": true,
-  "editor.suggestSelection": "first",
-  "editor.tabSize": 2,
-  "eslint.format.enable": true,
-  "eslint.validate": [
-    "typescript",
-    "typescriptreact"
-  ],
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "extensions.autoCheckUpdates": false,
-  "extensions.ignoreRecommendations": true,
-  "files.exclude": {
-    // "**/.esbuild": false,
-    // "**/.build": true,
-    "**/.expo-shared": true,
-    "**/.git": true,
-    "**/.webpack": true,
-    "**/layers": true,
-    "coverage": true
-  },
-  "git.confirmSync": false,
-  "git.mergeEditor": true,
-  "git.suggestSmartCommit": false,
-  "github.copilot.enable": {
-    "*": true,
-    "markdown": true,
-    "plaintext": true,
-    "yaml": false
-  },
-  "githubPullRequests.createOnPublishBranch": "never",
-  "githubPullRequests.pullBranch": "never",
-  "githubPullRequests.terminalLinksHandler": "github",
-  "gitlens.advanced.messages": {
-    "suppressGitMissingWarning": true
-  },
-  "gitlens.views.branches.files.compact": false,
-  "gitlens.views.commits.files.compact": false,
-  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.validate.enable": false,
-  "jest.coverageColors": {
-    "partially-covered": "rgba(255,215,0, 0.2)",
-    "uncovered": "rgba(56, 1, 7, 0.2)"
-  },
-  "jest.debugMode": true,
-  "jest.showCoverageOnLoad": true,
-  "jestrunner.configPath": "./jest.config.js",
-  "security.workspace.trust.untrustedFiles": "open",
-  "settingsSync.ignoredSettings": [
-    "editor.fontFamily"
-  ],
-  "sonarlint.connectedMode.connections.sonarcloud": [
-    {
-      "organizationKey": "rediredi",
-      "connectionId": "rediredi"
-    }
-  ],
-  "standard.autoFixOnSave": true,
-  "standard.enable": true,
-  "terminal.external.osxExec": "Hyper.app",
-  "terminal.integrated.automationProfile.osx": {},
-  "terminal.integrated.customGlyphs": false,
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
-  "terminal.integrated.fontFamily": "Menlo Nerd Font, \"DejaVu Sans Mono\", Consolas, \"Lucida Console\", monospace",
-  "terminal.integrated.fontSize": 13.5,
-  "terminal.integrated.fontWeightBold": "normal",
-  "terminal.integrated.sendKeybindingsToShell": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "window.commandCenter": true,
-  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
-  "workbench.activityBar.location": "top",
-  "workbench.colorCustomizations": {},
-  "workbench.colorTheme": "Dracula Pro",
-  "workbench.editor.showTabs": "multiple",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.tree.indent": 8
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"[yml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"apc.stylesheet": {
+		".title-label > h2": "display: none;",
+		".editor-actions": "display: none;"
+	},
+	"breadcrumbs.enabled": false,
+	"diffEditor.hideUnchangedRegions.enabled": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit",
+		"source.organizeImports": "explicit"
+	},
+	"editor.folding": true,
+	"editor.fontFamily": "'Monaspace Neon', monospace",
+	"editor.fontLigatures": "'calt', 'liga', 'dlig'",
+	"editor.fontSize": 13,
+	"editor.inlineSuggest.enabled": true,
+	"editor.lineHeight": 1.6,
+	"editor.linkedEditing": true,
+	"editor.renderLineHighlight": "gutter",
+	"editor.rulers": [
+		80,
+		120
+	],
+	"editor.scrollbar.horizontal": "hidden",
+	"editor.scrollbar.vertical": "hidden",
+	"editor.stickyScroll.enabled": true,
+	"editor.suggestSelection": "first",
+	"editor.tabSize": 2,
+	"eslint.format.enable": true,
+	"eslint.validate": [
+		"typescript",
+		"typescriptreact"
+	],
+	"explorer.compactFolders": false,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		"package.json": "package*, .eslint*, jest*, .gitignore, .npmrc, .nvmrc, .prettier*, , esbuild*, webpack*, .babel*, tsconfig*, pnpm-lock*, bun.lockb,",
+		".env": ".env*"
+	},
+	"files.exclude": {
+		"**/.esbuild": false,
+		"**/.build": true,
+		"**/dist": true,
+		"**/.serverless": false,
+		"**/swagger": true,
+		"**/.git": true,
+		"coverage": true
+	},
+	"git.mergeEditor": true,
+	"git.suggestSmartCommit": false,
+	"githubPullRequests.createOnPublishBranch": "never",
+	"githubPullRequests.pullBranch": "never",
+	"githubPullRequests.terminalLinksHandler": "github",
+	"gitlens.advanced.messages": {
+		"suppressGitMissingWarning": true
+	},
+	"javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"javascript.validate.enable": false,
+	"jest.debugMode": true,
+	"jest.showCoverageOnLoad": true,
+	"jestrunner.configPath": "./jest.config.js",
+	"jestrunner.jestPath": "/Users/carlos/www/rediredi/modules/node_modules/jest/bin/jest.js",
+	"security.workspace.trust.untrustedFiles": "open",
+	"settingsSync.ignoredSettings": [
+		"editor.fontFamily"
+	],
+	"standard.autoFixOnSave": true,
+	"standard.enable": true,
+	"symbols.hidesExplorerArrows": true,
+	"terminal.external.osxExec": "Warp.app",
+	"terminal.integrated.customGlyphs": false,
+	"terminal.integrated.defaultProfile.osx": "zsh",
+	"terminal.integrated.enableMultiLinePasteWarning": false,
+	"terminal.integrated.fontFamily": "Menlo Nerd Font, \"DejaVu Sans Mono\", Consolas, \"Lucida Console\", monospace",
+	"terminal.integrated.fontSize": 13.5,
+	"terminal.integrated.fontWeightBold": "normal",
+	"terminal.integrated.sendKeybindingsToShell": true,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"window.commandCenter": false,
+	"window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+	"workbench.activityBar.location": "hidden",
+	"workbench.colorCustomizations": {},
+	"workbench.colorTheme": "Dracula Pro",
+	"workbench.editor.labelFormat": "short",
+	"workbench.editor.showTabs": "multiple",
+	"workbench.iconTheme": "symbols",
+	"workbench.layoutControl.enabled": false,
+	"workbench.startupEditor": "newUntitledFile",
+	"workbench.tree.indent": 8
 }
