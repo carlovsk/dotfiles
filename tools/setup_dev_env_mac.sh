@@ -71,7 +71,22 @@ done
 # -----------------------------------------------------------------------------
 # 4. Homebrew Cask Apps -------------------------------------------------------------
 # -----------------------------------------------------------------------------
-BREW_CASK_PACKAGE_LIST=(docker raycast alt-tab)
+BREW_CASK_PACKAGE_LIST=(
+  docker
+  raycast
+  alt-tab
+  keepingyouawake
+  bruno
+  postman
+  # insomnia
+  # visual-studio-code
+  # warp
+  # chatgpt
+  # setapp
+  # slack
+  # microsoft-teams
+  # thebrowsercompany-dia
+)
 
 for pkg in "${BREW_CASK_PACKAGE_LIST[@]}"; do
   if brew list "$pkg" >/dev/null 2>&1; then
