@@ -6,26 +6,60 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # aliases
+alias h="echo $HOST"
 alias cls="clear"
 alias www="cd ~/www"
 alias zs="cat ~/.zshrc"
 alias zss="source ~/.zshrc"
 alias zsc="code ~/.zshrc"
 alias zsn="nano ~/.zshrc"
-alias ytdl="youtube-dl"
-alias nrsl="npm run start:local"
-alias nsil="npx serverless invoke local --function"
-alias nrtu="npm run test:unit -- --watch"
+alias zsne="nano ~/.zshenv"
+
 alias awsc="code ~/.aws/config"
-alias awsl="aws sso login"
-alias awse="aws-sso-creds export"
+alias awsl="aws sso login --sso-session rediredi --profile rediredi"
+
+function awse() {
+  local profile=${1:-rediredi}
+  aws --profile "$profile" configure export-credentials --format env > ~/.aws/sso-env
+  source ~/.aws/sso-env
+
+  echo "Loaded credentials for $profile into env. Session token will expire after $AWS_CREDENTIAL_EXPIRATION."
+}
+
+function aws-load-sso() {
+  local profile=${1:-rediredi}
+  aws sso login --profile "$profile"
+  aws --profile "$profile" configure export-credentials --format env > ~/.aws/sso-env
+  source ~/.aws/sso-env
+  echo "Loaded credentials for $profile into env."
+}
+
+alias nrs="npm run start"
+alias nrsl="npm run start:local"
+alias prsl="pnpm run start:local"
+alias nsil="npx serverless invoke local --function"
+alias nrt="npx jest --bail --detectOpenHandles --forceExit --noStackTrace --runInBand"
+alias nrtu="npm run test:unit -- --watch"
+alias nrtw="npx jest --bail --forceExit --noStackTrace --watch"
+alias nrtc="npx tsc --noEmit"
+alias nvm="fnm"
+alias npmi="npm i"
+alias ni="npm i"
+alias nid="npm i -D"
+alias n="nvm use && npm i"
+alias p="pnpm i"
+alias pi="pnpm i"
 
 alias gl="git log"
+alias glol="git log --oneline"
 alias vai="git push"
 alias vem="git pull"
 alias gfo="git fetch origin"
 alias gmc="git merge --continue"
 alias gmom="git merge origin/main"
+alias gch="git switch"
+alias gchb="git switch -c"
+alias gbl='git for-each-ref --sort=-committerdate --format="%(refname:short)" refs/heads/ | head -n'
 
 function cd {
     builtin cd "$@"
@@ -33,28 +67,6 @@ function cd {
     ls -la
     return $RET
 }
-
-# spaceship config
-SPACESHIP_PROMPT_ORDER=(
-  time          # Time stamps section
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  node          # Node.js section
-  hg            # Mercurial section (hg_branch  + hg_status)
-  exec_time     # Execution time
-  line_sep      # Line break
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
-SPACESHIP_USER_SHOW=always
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_CHAR_SYMBOL="❯"
-SPACESHIP_CHAR_SUFFIX=" "
-SPACESHIP_TIME_SHOW=true
-SPACESHIP_TIME_FORMAT=%*
 
 # zinit
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -73,23 +85,12 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
-# nvm
- export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
-
 # exports
-export EDITOR=nano
-export AWS_REGION=us-east-1
+source ~/.zshenv # this is where credentials and envs are loaded
 
 source ~/.profile
 
 export PATH="/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-source /Users/carlos/.config/op/plugins.sh
 
 # pnpm
 export PNPM_HOME="/Users/carlos/Library/pnpm"
@@ -102,3 +103,15 @@ export PATH="$PNPM_HOME:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# fnm
+FNM_PATH="/Users/carlos/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/carlos/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+# Created by `pipx` on 2025-05-11 16:41:57
+export PATH="$PATH:/Users/carlos/.local/bin"

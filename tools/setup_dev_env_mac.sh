@@ -13,7 +13,7 @@
 #    • Oh My Zsh (unattended)
 # -----------------------------------------------------------------------------
 #  Usage
-#    curl -fsSL https://example.com/setup_dev_env_mac.sh | bash
+#    curl -fsSL https://raw.githubusercontent.com/carlovsk/dotfiles/refs/heads/master/tools/setup_dev_env_mac.sh | bash
 #  or
 #    chmod +x setup_dev_env_mac.sh && ./setup_dev_env_mac.sh
 # -----------------------------------------------------------------------------
@@ -56,10 +56,10 @@ fi
 brew update && brew upgrade
 
 # -----------------------------------------------------------------------------
-# 3. Core packages --------------------------------------------------------------
+# 3. HomeBrew Core packages --------------------------------------------------------------
 # -----------------------------------------------------------------------------
-PACKAGE_LIST=(git wget curl python@3.12 fnm corepack)
-for pkg in "${PACKAGE_LIST[@]}"; do
+BREW_PACKAGE_LIST=(git wget curl python@3.12 fnm corepack yt-dlp ffmpeg git-standup aws-sso-cli awscli neofetch)
+for pkg in "${BREW_PACKAGE_LIST[@]}"; do
   if brew list "$pkg" >/dev/null 2>&1; then
     log "$pkg already installed"
   else
@@ -68,35 +68,65 @@ for pkg in "${PACKAGE_LIST[@]}"; do
 done
 
 # -----------------------------------------------------------------------------
-# 4. Homebrew Apps -------------------------------------------------------------
+# 4. Homebrew Cask Apps -------------------------------------------------------------
 # -----------------------------------------------------------------------------
-if ! brew list --cask docker >/dev/null 2>&1; then
-  warn "Installing Docker Desktop (cask) …"
-  brew install --cask docker
-  log "Docker Desktop installed – launch it once to finish setup"
-else
-  log "Docker Desktop already installed"
-fi
+BREW_CASK_PACKAGE_LIST=(docker raycast alt-tab)
 
-if ! brew list --cask raycast >/dev/null 2>&1; then
-  warn "Installing Raycast …"
-  brew install --cask raycast
-  log "Raycast installed – open it once to grant accessibility permissions"
-else
-  log "Raycast already installed"
-fi
-
-if ! brew list --cask alt-tab >/dev/null 2>&1; then
-  warn "Installing AltTab …"
-  brew install --cask alt-tab
-  log "AltTab installed – open it once to grant accessibility permissions"
-else
-  log "AltTab already installed"
-fi
-
+for pkg in "${BREW_CASK_PACKAGE_LIST[@]}"; do
+  if brew list "$pkg" >/dev/null 2>&1; then
+    log "$pkg already installed"
+  else
+    warn "Installing $pkg (cask)…"
+    brew install --cask "$pkg"
+    log "$pkg installed – launch it once to finish setup"
+  fi
+done
 
 # -----------------------------------------------------------------------------
-# 5. FNM & Node.js --------------------------------------------------------------
+# 5. Dotfiles -----------------------------------------------------------------
+# -----------------------------------------------------------------------------
+if [[ ! -d "$HOME/www/dotfiles" ]]; then
+  warn "Cloning dotfiles repository …"
+
+  if [[ ! -d "$HOME/www" ]]; then
+    mkdir -p "$HOME/www"
+  fi
+
+  git clone https://github.com/carlovsk/dotfiles.git "$HOME/www/dotfiles" || {
+    fail "Failed to clone dotfiles repository. Please check your SSH setup."
+  }
+
+  log "Dotfiles repository cloned to $HOME/www/dotfiles"
+
+  else
+  log "Dotfiles repository already cloned at $HOME/www/dotfiles"
+fi
+
+# Oh My Zsh
+if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
+  warn "Installing Oh My Zsh …"
+  RUNZSH=no KEEP_ZSHRC=yes CHSH=no /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  log "Oh My Zsh installed"
+else
+  log "Oh My Zsh already installed"
+fi
+
+# Dotfiles
+DOTFILES_LIST=(.zshrc .gitconfig .profile .npmrc)
+
+for dotfile in "${DOTFILES_LIST[@]}"; do
+  if [[ ! "$HOME/$dotfile" ]]; then
+    echo '# >>> dotfiles setup >>>' >> "$HOME/$dotfile"
+    echo 'source $HOME/www/dotfiles/$dotfile' >> "$HOME/$dotfile"
+    echo '# <<< dotfiles setup <<<' >> "$HOME/$dotfile"
+    log "Added dotfiles init to ~/$dotfile"
+  else
+    log "Dotfiles already sourced in ~/$dotfile"
+  fi
+done
+
+# -----------------------------------------------------------------------------
+# 6. FNM & Node.js --------------------------------------------------------------
 # -----------------------------------------------------------------------------
 if ! grep -q "fnm env" "$HOME/.zshrc" 2>/dev/null; then
   echo '# >>> fnm setup >>>' >> "$HOME/.zshrc"
@@ -119,7 +149,7 @@ fi
 fnm default "$LATEST_LTS"
 
 # -----------------------------------------------------------------------------
-# 6. pnpm via Corepack ----------------------------------------------------------
+# 7. pnpm via Corepack ----------------------------------------------------------
 # -----------------------------------------------------------------------------
 corepack enable
 auth_pnpm_version=$(corepack ls | grep pnpm | awk '{print $2}') || true
@@ -132,23 +162,12 @@ else
 fi
 
 # -----------------------------------------------------------------------------
-# 7. Python 3 symlink -----------------------------------------------------------
+# 8. Python 3 symlink -----------------------------------------------------------
 # -----------------------------------------------------------------------------
 if ! command -v python3 >/dev/null 2>&1; then
   brew link --overwrite python@3.12
 fi
 log "Python $(python3 --version) available"
-
-# -----------------------------------------------------------------------------
-# 8. Oh My Zsh -----------------------------------------------------------------
-# -----------------------------------------------------------------------------
-if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
-  warn "Installing Oh My Zsh …"
-  RUNZSH=no KEEP_ZSHRC=yes CHSH=no /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  log "Oh My Zsh installed"
-else
-  log "Oh My Zsh already installed"
-fi
 
 # -----------------------------------------------------------------------------
 # 9. Finishing up ---------------------------------------------------------------
