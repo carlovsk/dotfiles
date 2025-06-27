@@ -133,7 +133,7 @@ DOTFILES_LIST=(.zshrc .gitconfig .profile .npmrc)
 for dotfile in "${DOTFILES_LIST[@]}"; do
   if [[ ! "$HOME/$dotfile" ]]; then
     echo '# >>> dotfiles setup >>>' >> "$HOME/$dotfile"
-    echo 'source $HOME/www/dotfiles/$dotfile' >> "$HOME/$dotfile"
+    echo "source $HOME/www/dotfiles/$dotfile" >> "$HOME/$dotfile"
     echo '# <<< dotfiles setup <<<' >> "$HOME/$dotfile"
     log "Added dotfiles init to ~/$dotfile"
   else
