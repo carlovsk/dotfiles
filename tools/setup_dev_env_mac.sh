@@ -7,10 +7,11 @@
 #    • Xcode Command‑Line Tools (prerequisite)
 #    • Homebrew
 #    • Homebrew apps
+#    • Oh My Zsh (unattended)
+#    • Dotfiles setup (from this very repository)
 #    • fnm (Fast Node Manager) + latest LTS Node.js
 #    • pnpm via Corepack
 #    • Python 3 (brew)
-#    • Oh My Zsh (unattended)
 # -----------------------------------------------------------------------------
 #  Usage
 #    curl -fsSL https://raw.githubusercontent.com/carlovsk/dotfiles/refs/heads/master/tools/setup_dev_env_mac.sh | bash
