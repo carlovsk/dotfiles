@@ -53,7 +53,28 @@ else
 fi
 
 # Update & upgrade
-# brew update && brew upgrade
+ask_brew_update() {
+  while true; do
+    printf "${YELLOW}[?] Do you want to update and upgrade Homebrew packages? (y/n): ${NC}"
+    read -r response
+    case "$response" in
+      [Yy])
+        log "Updating and upgrading Homebrew packages..."
+        brew update && brew upgrade
+        break
+        ;;
+      [Nn])
+        info "Skipping Homebrew update and upgrade"
+        break
+        ;;
+      *)
+        warn "Please enter 'y' for yes or 'n' for no"
+        ;;
+    esac
+  done
+}
+
+ask_brew_update
 
 # ------------------------------------------------------------------------------
 # 3. HomeBrew Core packages ----------------------------------------------------
@@ -100,7 +121,7 @@ BREW_CASK_PACKAGE_LIST=(
   # slack
   # gather # This is optional. Gather is a virtual office platform for meetings and collaboration.
   # microsoft-teams
-  # arc
+  arc
   # thebrowsercompany-dia
   # tailscale
   # nordvpn
