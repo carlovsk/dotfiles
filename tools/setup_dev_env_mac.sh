@@ -266,6 +266,7 @@ setup_ssh_auth() {
   else
     warn "SSH key exists but $platform authentication failed"
     info "Adding SSH key to agent and copying public key to clipboard..."
+    pbcopy < ~/.ssh/id_ed25519.pub
     info "Your public key has been copied to your clipboard:"
     
     echo ""
