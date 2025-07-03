@@ -85,6 +85,7 @@ BREW_PACKAGE_LIST=(
   gpg
   curl
   python@3.12
+  go
   fnm
   corepack
   yt-dlp
@@ -92,14 +93,21 @@ BREW_PACKAGE_LIST=(
   git-standup
   aws-sso-cli
   awscli
+  aws-sso-creds
   neofetch
+  tmux
+  hyprnote
   # openai-whisper # This is optional, a CLI tool to transcribe audio files. It can be heavy and will install a bunch of stuff along with it.
   )
 for pkg in "${BREW_PACKAGE_LIST[@]}"; do
   if brew list "$pkg" >/dev/null 2>&1; then
     log "$pkg already installed"
   else
-    brew install "$pkg"
+    if [[ "$pkg" == "hyprnote" ]]; then
+      brew tap fastrepl/hyprnote && brew install --cask "$pkg"
+    else
+      brew install "$pkg"
+    fi
   fi
 done
 
@@ -113,18 +121,23 @@ BREW_CASK_PACKAGE_LIST=(
   keepingyouawake
   bruno
   postman
-  # insomnia
-  # visual-studio-code
-  # warp
-  # chatgpt
-  # setapp
-  # slack
-  # gather # This is optional. Gather is a virtual office platform for meetings and collaboration.
-  # microsoft-teams
+  insomnia
+  visual-studio-code
+  warp
+  chatgpt
+  setapp
+  slack
+  gather # This is optional. Gather is a virtual office platform for meetings and collaboration.
+  microsoft-teams
   arc
-  # thebrowsercompany-dia
-  # tailscale
-  # nordvpn
+  thebrowsercompany-dia
+  tailscale
+  nordvpn
+  notion
+  # These one are optional. Not dev tools but essentially main tools for me.
+  discord
+  whatsapp
+  spotify
 )
 
 for pkg in "${BREW_CASK_PACKAGE_LIST[@]}"; do
