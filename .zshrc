@@ -1,7 +1,7 @@
 export ZSH="/Users/carlos/.oh-my-zsh"
 ZSH_THEME="dracula-pro"
 
-plugins=(git)
+plugins=(git history-sync)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -15,6 +15,12 @@ alias zsc="code ~/.zshrc"
 alias zsn="nano ~/.zshrc"
 alias zsne="nano ~/.zshenv"
 
+# docker
+alias dcu="docker compose up"
+alias dcd="docker compose down"
+alias dcr="docker compose restart"
+
+# aws
 alias awsc="code ~/.aws/config"
 alias awsl="aws sso login --sso-session rediredi --profile rediredi"
 
@@ -34,6 +40,7 @@ function aws-load-sso() {
   echo "Loaded credentials for $profile into env."
 }
 
+# node
 alias nrs="npm run start"
 alias nrsl="npm run start:local"
 alias prsl="pnpm run start:local"
@@ -50,6 +57,7 @@ alias n="nvm use && npm i"
 alias p="pnpm i"
 alias pi="pnpm i"
 
+# git
 alias gl="git log"
 alias glol="git log --oneline"
 alias vai="git push"
@@ -61,11 +69,26 @@ alias gch="git switch"
 alias gchb="git switch -c"
 alias gbl='git for-each-ref --sort=-committerdate --format="%(refname:short)" refs/heads/ | head -n'
 
-function cd {
-    builtin cd "$@"
-    RET=$?
-    ls -la
-    return $RET
+# tmux
+alias tn='tmux new -s'             # tn dev => new session named 'dev'
+alias ta='tmux attach -t'          # ta dev => attach to 'dev'
+alias tl='tmux ls'                 # tl => list sessions
+alias tk='tmux kill-session -t'    # tk dev => kill session
+alias td='tmux detach'             # td => detach
+alias tx='tmux'                    # tx => raw tmux
+
+function tgo() {
+  local name="$1"
+  if [ -z "$name" ]; then
+    echo "Usage: tgo <session-name>"
+    return 1
+  fi
+  # Strict check for session name
+  if tmux list-sessions -F "#{session_name}" 2>/dev/null | grep -Fxq "$name"; then
+    tmux attach -t "$name"
+  else
+    tmux new -s "$name"
+  fi
 }
 
 # zinit
@@ -115,3 +138,6 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 
 # Created by `pipx` on 2025-05-11 16:41:57
 export PATH="$PATH:/Users/carlos/.local/bin"
+
+# opencode
+export PATH=/Users/carlos/.opencode/bin:$PATH
