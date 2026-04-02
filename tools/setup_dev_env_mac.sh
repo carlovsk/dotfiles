@@ -81,30 +81,44 @@ ask_brew_update
 # ------------------------------------------------------------------------------
 BREW_PACKAGE_LIST=(
   git
+  gh
+  git-standup
   wget
-  gpg
   curl
+  telnet
+  gpg
   python@3.12
+  uv
   go
   fnm
   corepack
   yt-dlp
   ffmpeg
-  git-standup
+  micro
+  tmux
+  act
+  k6
+  hey
+  redis
+  minikube
   aws-sso-cli
   awscli
   aws-sso-creds
+  aws-es-proxy
   neofetch
-  tmux
-  hyprnote
+  gemini-cli
+  sst/tap/opencode
+  hashicorp/tap/terraform
   # openai-whisper # This is optional, a CLI tool to transcribe audio files. It can be heavy and will install a bunch of stuff along with it.
   )
 for pkg in "${BREW_PACKAGE_LIST[@]}"; do
   if brew list "$pkg" >/dev/null 2>&1; then
     log "$pkg already installed"
   else
-    if [[ "$pkg" == "hyprnote" ]]; then
-      brew tap fastrepl/hyprnote && brew install --cask "$pkg"
+    if [[ "$pkg" == "hashicorp/tap/terraform" ]]; then
+      brew tap hashicorp/tap && brew install "$pkg"
+    elif [[ "$pkg" == "sst/tap/opencode" ]]; then
+      brew tap sst/tap && brew install "$pkg"
     else
       brew install "$pkg"
     fi
@@ -115,22 +129,21 @@ done
 # 4. Homebrew Cask Apps --------------------------------------------------------
 # ------------------------------------------------------------------------------
 BREW_CASK_PACKAGE_LIST=(
-  docker
+  docker-desktop
+  visual-studio-code
+  ghostty
   raycast
-  alt-tab
   keepingyouawake
   bruno
   postman
   insomnia
-  visual-studio-code
+  apidog
   warp
   chatgpt
+  claude
   setapp
   slack
-  gather # This is optional. Gather is a virtual office platform for meetings and collaboration.
-  microsoft-teams
   arc
-  thebrowsercompany-dia
   tailscale
   nordvpn
   notion
@@ -307,7 +320,18 @@ if [[ -f ~/.ssh/id_ed25519 ]]; then
 fi
 
 # ------------------------------------------------------------------------------
-# 10. Finishing up ------------------------------------------------------------
+# 10. Claude Code --------------------------------------------------------------
+# ------------------------------------------------------------------------------
+if command -v claude >/dev/null 2>&1; then
+  log "Claude Code already installed"
+else
+  warn "Installing Claude Code …"
+  curl -fsSL https://claude.ai/install.sh | bash
+  log "Claude Code installed"
+fi
+
+# ------------------------------------------------------------------------------
+# 11. Finishing up ------------------------------------------------------------
 # ------------------------------------------------------------------------------
 
 log "Developer environment ready!  🚀"
