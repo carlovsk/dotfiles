@@ -129,28 +129,30 @@ done
 # 4. Homebrew Cask Apps --------------------------------------------------------
 # ------------------------------------------------------------------------------
 BREW_CASK_PACKAGE_LIST=(
-  docker-desktop
-  visual-studio-code
-  ghostty
-  raycast
-  keepingyouawake
+  arc
   bruno
-  postman
-  insomnia
-  apidog
-  warp
   chatgpt
   claude
-  setapp
-  slack
-  arc
-  tailscale
+  docker-desktop
+  ghostty
+  insomnia
+  keepingyouawake
   nordvpn
   notion
+  obsidian
+  postman
+  raycast
+  setapp
+  slack
+  tailscale
+  visual-studio-code
+  warp
   # These one are optional. Not dev tools but essentially main tools for me.
+  claude-island
   discord
-  whatsapp
+  hyprnote
   spotify
+  whatsapp
 )
 
 for pkg in "${BREW_CASK_PACKAGE_LIST[@]}"; do
